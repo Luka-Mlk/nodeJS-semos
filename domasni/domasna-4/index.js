@@ -8,7 +8,7 @@ const server = http.createServer((req, res) => {
     let result = textArr[2] - textArr[3];
     res.end(String(result));
   } else if (textArr[1] === "sobiranje") {
-    let result = textArr[2] + textArr[3];
+    let result = Number(textArr[2]) + Number(textArr[3]);
     res.end(String(result));
   } else if (textArr[1] === "mnozenje") {
     let result = textArr[2] * textArr[3];
