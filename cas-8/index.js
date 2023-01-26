@@ -9,7 +9,7 @@ app.post("/studenti", handlers.addStudent);
 // get /studenti:id -> vrajka studenti so id
 app.get("/studenti/:id", handlers.getStudentById);
 // put /studenti:id -> azurira student so id
-
+app.get("/students/:id", handlers.getStudentById);
 // delete /studenti:id -> brise student so id
 
 app.listen(3000, (err) => {
