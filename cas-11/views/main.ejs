@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>Ova e mojot Node.js Blog</h1>
+      <a href="/form">Add new blogpost</a>
+    </header>
+    <% data.forEach(post => {%>
+    <article>
+      <h2><%= post.title %></h2>
+      <div><%= post.content %></div>
+      <br />
+      <span><%= post.publish_date %></span>
+      <a href="/form/<%= post._id %>">Uredi post</a>
+      <a href="/callback/remove/<%= post._id %>">Izrbishi post</a>
+      <a href="/blogpost/<%= post._id %>">Procitaj post</a>
+    </article>
+    <br />
+    <hr />
+    <% }); %>
+  </body>
+</html>
